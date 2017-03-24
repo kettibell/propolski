@@ -1,0 +1,115 @@
+/*end основная разметка*/
+.polski-carousel {   
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 1rem 1.5rem;
+      margin-bottom: 10px;
+}
+.polski-carousel h3 {
+      font-size: 28;
+      color: #ff0000;     
+}
+.polski-carousel p {   
+      color: #ff0000;  
+      /*color: #8e2 3e6; фиолетовый   */
+}
+
+/*хедер*/
+/*img {
+    margin-bottom: 0px;
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+    cursor: auto;
+    float:left; 
+    margin: 0px 7px 7px 0; 
+    z-index: 4;
+}*/
+
+.all_lines  {
+  width: 100%;
+  display: block; 
+  float: none;
+   margin: 10px 0px 0px 0px;
+  /*margin: 15px auto;*/
+  
+}
+
+.all_main_img  {
+  width: 82%;
+       display:block; 
+    float: none;
+    margin: 0px auto;
+
+  
+}
+.all_l_i_n_e{
+    width: 80%;
+       display:block; 
+    float: none;
+    margin: 0px auto;
+     background-repeat:  repeat-x;
+
+}
+
+.all_icons{
+  /*float: right; */
+  margin: 2px 0px 2px 2px;
+  padding: 20px 0 0 0;
+}
+
+.all_find{
+  float: right; 
+  margin: 5px 5px 10px 10px;
+}
+
+#header-text {
+    float: none;
+    text-align: left;
+    padding: 0;
+    /*margin-bottom: 10px;*/
+        text-align: center;
+}
+/*h1#site-title {
+    padding-bottom: 5px;
+    margin-top: 2px;
+}*/
+#site-title a {
+    color: #ff0000;
+        font-size: 36px;   
+         text-decoration: none;
+}
+#site-description {
+    color: #ff0000;
+}
+@media screen and (max-width: 768px)
+#site-description {
+    padding-bottom: 5px;
+}
+#site-description {
+    line-height: 24px;
+    font-size: 16px;
+    padding-bottom: 0;
+    color: #666666;
+}
+p#site-description {
+    line-height: 24px;
+    margin-bottom: 10px;
+    font-family: 'Myriad Pro', sans-serif;
+    font-size: 16px;
+}
+
+.search-row{
+ /* background-image: url("/web/static/img/all/find.png");*/
+
+  /*background-size: cover; /* Масштабируем фон */
+   background-repeat: no-repeat;
+  width: 45%;
+  /*max-height: 40px;*/
+    float: right; 
+  /*padding: 10px 10px 10px 10px;*/
+         /*display:block; */
+    /*float: none;*/
+}
+
+/*end-хедер*/
+ 

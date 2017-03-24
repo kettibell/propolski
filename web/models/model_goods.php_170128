@@ -1,0 +1,107 @@
+<?
+
+class Model_Goods extends Model
+{
+	
+	protected $query;
+
+
+	public function __construct ($db){
+		parent::__construct($db);
+	}
+
+
+	public function getGoodByCategoryId ($id) {
+		$articles=[];
+		$articles=Goods::getGoodByCategoryId( $this->db, $id);
+		return $articles;
+  	}
+
+  	public function getGoodByGoodId ($id) {
+		$articles=[];
+		$articles=Goods::getGoodByGoodId( $this->db, $id);
+		return $articles;
+  	}
+
+
+ 	public function getAllGoods () {
+		$this->query="SELECT  `idGood`, `name`, `nameLink`, `price`, `oldPrice`, `endingGood`, `description`, `mediaLinkVideo`, `mediaLinkDemo`, `topSales`, `promo`,`imgGood`,`raiting` FROM `GOODS`";
+		$allgoods=$this->db->getQueryResutlInArray($this->query);
+		//var_dump($allgoods);
+		 $new_all_goods = [];
+		foreach ($allgoods as $key => $onegood) {
+			if(isset($onegood["idGood"])) {
+				$this->query="SELECT  `color` FROM `GOODS_COLOR` where  `idGood`='".$onegood["idGood"]."'";
+				 	$goodColors ["goodColors"]=[];
+					$goodColors["goodColors"]=$this->db->getQueryResutlInArray($this->query);
+					 $new_one_goods=array_merge($onegood, $goodColors);
+					//array_push($onegood, $goodColors["goodColors"]);
+					//var_dump(array_merge($onegood, $goodColors));
+					$new_all_goods[] = $new_one_goods;//добавляет в конец
+					 // $new_all_goods=array_merge($new_all_goods, $new_onegood);
+
+					// var_dump($new_all_goods);
+					// echo "___________________________________";
+					
+			} else {
+ 				$new_all_goods[] = $onegood;
+			}
+		}
+		//var_dump($new_all_goods);
+
+		return $new_all_goods;
+  }
+	public function buygood () {
+		if (isset($_GET['id']))  {
+			$this->idGood= trim (htmlspecialchars(strip_tags($_GET['id'])));
+			$basket= ($_COOKIE["basket"]) ? unserialize($_COOKIE["basket"]) : [] ;		
+						
+			$isNewBasket=true;
+			// foreach ($basket as $basket_id => $onebasket) {
+				foreach ($basket as $basket_key => $basket_value) {
+					//var_dump( $basket_value);
+					// echo "<br>for id ".$basket_key."  $basket_count".$basket_value."idGood ".$this->idGood;
+					if ($this->idGood==$basket_key) {
+						$basket[$basket_key]=++$basket_value;
+						//echo "onebasket  ";var_dump($onebasket);
+						$isNewBasket=false;
+						break;
+					}
+				// }
+				
+			}
+			if ($isNewBasket) {
+				$count=1;
+				//$basket_new=[$this->idGood => $count];				
+				$basket[$this->idGood]=$count;
+			}
+			setcookie("basket", serialize($basket) ,time()+24*3600 ,'/'); // кука на сутки , time()+24*3600
+			// echo "<br>".var_dump(unserialize($_COOKIE["basket"]));
+			// echo "<br>bass ".var_dump($basket);	
+			// echo "<br>basket_new ".var_dump($basket_new);	
+
+			// echo "<br>basket coo".$_COOKIE["basket"];
+		}
+	}
+
+
+		public function showgood()
+	{	
+		if (isset($_GET['id']))  {
+				$this->idGood= trim (htmlspecialchars(strip_tags($_GET['id'])));
+				$this->query="SELECT  `idGood`, `name`, `nameLink`, `price`, `oldPrice`, `endingGood`, `description`, `mediaLinkVideo`, `mediaLinkDemo`, `topSales`, `promo`,`imgGood`,`raiting` FROM `GOODS` where `idGood`='$this->idGood'";
+				$dbRes=$this->db->getQueryResutlInArray($this->query);
+				// var_dump($dbRes[0]);
+				if ($dbRes[0]) {
+					return $dbRes[0];
+				} else {
+					return null;
+				}
+		} else {
+			return null;
+		}	
+	}
+
+
+}
+?>

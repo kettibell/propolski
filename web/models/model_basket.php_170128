@@ -1,0 +1,38 @@
+<?
+
+class Model_Basket extends Model
+{
+	
+	protected $query;
+	public $db;
+
+
+
+	public function __construct ($db){
+		parent::__construct($db);
+		$this->db=$db;
+	}
+
+	public function getAllBuys () {
+		$buys=[];
+		if ($_COOKIE["basket"]) {
+			$buys= unserialize($_COOKIE["basket"]);
+		}
+		$res=Basket::getBasketData($this->db, $buys);
+		return $res;
+  	}
+	  public function setOrder () {
+	  	if (trim (htmlspecialchars(strip_tags($_POST['email'])))) {
+			$orderData["email"] = trim (htmlspecialchars(strip_tags($_POST['email'])));
+			$orderData["name"]= trim (htmlspecialchars(strip_tags($_POST['name'])));
+			$orderData["surname"] = trim (htmlspecialchars(strip_tags($_POST['surname'])));
+			$orderData["patronymic"] = trim (htmlspecialchars(strip_tags($_POST['patronymic'])));
+			$orderData["country"] = trim (htmlspecialchars(strip_tags($_POST['country'])));
+			$orderData["city"] = trim (htmlspecialchars(strip_tags($_POST['city'])));
+			$orderData["phone"] = trim (htmlspecialchars(strip_tags($_POST['phone'])));
+		}
+		// TODO Проверка полей 
+		$res=Basket::setOrder($this->db, $orderData);
+	  }
+}
+?>

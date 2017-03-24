@@ -1,0 +1,123 @@
+
+body { 
+	overflow-x:hidden;
+}
+
+header {
+      display: block; /* Для старых браузеров */
+      /*height: 345px;*/ /* Высота шапки jpg*/
+      display: inline-block;
+        width: 80%;
+    margin-left: 10% ;
+
+      /*background: url(../img/header/5.png) no-repeat center bottom;*/
+
+    }
+
+/*основная разметка*/
+#container {            
+  /*border: 1px solid grey;
+  box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.4);*/
+     margin-top: :   5px;
+      margin-bottom:    5px;
+  /*margin: 5px auto;*/
+  width: 100%;
+  display: inline-block;
+
+}
+#left-menu {   
+ /* border: 1px solid grey;
+  box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.4);*/
+  float: left;
+  width: 14%;
+  display: inline-block;
+  z-index: 2;   
+}
+
+#right-menu {
+ /* border: 1px solid grey;
+  box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.4);*/
+  float: right;
+  width: 14%;
+  /*height: 400px;*/
+  display: inline-block;
+   z-index: 2; 
+}
+#content {  
+ /* border: 1px solid grey;
+  box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.4);*/
+  padding: 3px ;
+  float: left; 
+  width: 80%;
+    margin-left: 10% ;
+  display: inline-block;  
+  z-index: 4;     
+}
+
+footer {
+  bottom: 0;
+
+      display: block; /* Для старых браузеров */
+      display: inline-block;
+        width: 80%;
+    margin-left: 10% ;
+    }
+
+
+/*end основная разметка*/
+
+/*.footer {
+  position: absolute; 
+  /*margin-left: 10% ;*/
+
+/*  float: left;
+  left: 10%;
+  bottom: 0;
+  width: 80%;*/
+
+
+}*/
+
+#btn_btn-primary_my {
+  height: 100px;
+}
+
+
+
+
+/*Заголовки*/
+ .pol_h h1  {
+ font-size:72px;
+color:#8e23e6;
+text-shadow:#fff 5px 5px 4px;
+font-family: "Monotype Corsiva"
+
+}
+
+ .pol_h a {
+color:#8e23e6;
+}
+ .pol_h h2 {
+  padding-left: 10px ;
+  font-family: "Georgia",sans-serif;
+  font-size: 32px;
+  color:  #8e23e6;
+
+}
+/*end-Заголовки*/
+
+
+/*Плюшки для юзера*/
+.middle-avatar {
+ /* max-height: 60px;
+  max-width:  60px;*/
+  height: 100px;
+  width:  100px;
+}
+
+/*end-Плюшки для юзера*/
+/*Сообщения*/
+.warningMsg{
+  color:red;
+}
+/*end-Сообщения*/

@@ -1,0 +1,22 @@
+/*about*/
+.img_about {
+    width: 500px;
+    height: 333px;
+       display:block; 
+    float: none;
+    margin: 15px auto;
+}
+.about {
+   margin-right: 10px; /* Отступ справа */
+   margin-left: 10px; /* Отступ слева */
+}
+.about p {
+  font-family: "Georgia",sans-serif;
+  font-size: 16px;
+  text-indent: 20px; /* Отступ первой строки в пикселах */
+  /*margin:15px;*/
+  padding: 5px;/*отступ между абзацами*/
+  margin-left: 0.5em; 
+  text-align: justify;
+}
+/*end-about*/

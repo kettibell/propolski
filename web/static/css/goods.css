@@ -1,0 +1,201 @@
+	/*Категории*/
+	
+.all_goods { 
+
+    display: inline-block;float: left;
+
+   }
+
+.block1 { 
+    border: 1px solid #a8cbeb;
+    box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.4);
+    width: 250px; 
+    height: 620px;
+    display: inline-block; /*чтоб блоки шли друг за другом*/
+    float: left;
+     margin: 5px;
+     /*left: -17px;
+    min-height: 31.75em;
+    position: absolute;
+    right: 0;
+    top: -12px;
+    z-index: 10;
+    right: -90px;*/    
+   }
+
+   .good_img{
+    left:0;
+    top:0px;
+    /*max-width:100%;*/
+    width: 80%; 
+    height: 60%;
+   	border: 1px solid #8e23e6; 
+   	visibility: visible; 
+   	opacity: 1;
+    position: relative;
+    margin: 5px auto;
+    padding: 5px 0;  
+   }
+    .good_img img {
+        max-width: 99%; 
+        max-height: 99%; 
+        position: relative;
+        margin: 0px auto;
+       padding: 0px 0;  
+      }
+
+   .sticker_img{
+    position: relative;    
+    visibility: visible; 
+    left: -2px; top: 2px;
+    z-index: 3;
+    float:left; 
+    max-width: 90px; 
+    max-height: 45px; 
+ 
+   }
+
+    .col_img{
+    width: 25px;
+    height: 25px;
+    position: relative;    
+    visibility: visible; 
+    left: 2px; 
+    top: 2px;
+       display: inline-block;
+       padding: 7px ;  
+    /*z-index: 3;*/
+    /*float:left; */
+ 
+   }
+
+
+   .good_title {
+    font-size: 12;
+    margin-bottom: 0.76923em;
+    margin-top: 0.38462em;
+    max-height: 4.69231em;
+    overflow: hidden;
+    position: relative;
+}
+
+.g-price {
+	background: #fff3b5 none repeat scroll 0 0;
+    text-align: center;
+	width: 100px;
+   	/*height: 20px;*/
+    border-radius: 2px;
+    margin-left: 7px;
+    padding: 2px 6px;
+}
+.g-price-uah {
+    font-size: 0.8125rem;
+    line-height: 1.0625rem;
+}
+
+.g-oldprice {
+    background: #f49fa8 none repeat scroll 0 0;
+    text-align: center;
+    width: 100px;
+    /*height: 20px;*/
+    border-radius: 2px;
+    margin-left: 7px;
+    padding: 2px 6px;
+}
+.g-oldprice-uah {
+    font-size: 0.8125rem;
+    line-height: 1.0625rem;
+}
+
+
+.submit {
+	width: 120px;
+	height: 32px;
+	padding: 0 0 2px;
+	font: 16px "Trebuchet MS", Tahoma, Arial, sans-serif;
+	margin-left: 7px;
+	outline: none;
+	position: relative;
+	cursor: pointer;
+	border-radius: 3px;
+	color: #5D7731;
+	text-shadow: 1px 1px #D0E5A4;
+	border: 1px solid #89A94D;
+	border-top: 1px solid #AAD063;
+	border-bottom: 1px solid #6D883B;
+	box-shadow:
+		inset 0 1px #E0EEB6,
+		inset 1px 0 #C6E08D,
+		inset -1px 0 #C6E08D,
+		inset 0 -1px #B4D579,
+		0 2px #799545,
+		0 3px #6D883B,
+		0 4px 2px rgba(0,0,0,0.4)
+	;
+	background: -moz-linear-gradient(top,  #cae285 0%, #a3cd5a 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cae285), color-stop(100%,#a3cd5a)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #cae285 0%,#a3cd5a 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #cae285 0%,#a3cd5a 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #cae285 0%,#a3cd5a 100%); /* IE10+ */
+	background: linear-gradient(top,  #cae285 0%,#a3cd5a 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cae285', endColorstr='#a3cd5a',GradientType=0 ); /* IE6-9 */
+	background-color: #B6D76F;
+}
+.submit::-moz-focus-inner{border:0}
+.submit:hover {
+	border-top: 1px solid #98B85B;
+	box-shadow:
+		inset 0 1px #CCE3A1,
+		inset 1px 0 #C6E08D,
+		inset -1px 0 #C6E08D,
+		inset 0 -1px #C7E18E,
+		0 2px #799545,
+		0 3px #6D883B,
+		0 4px 2px rgba(0,0,0,0.4)
+	;
+	background: -moz-linear-gradient(top,  #abd164 0%, #b9d972 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#abd164), color-stop(100%,#b9d972)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #abd164 0%,#b9d972 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #abd164 0%,#b9d972 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #abd164 0%,#b9d972 100%); /* IE10+ */
+	background: linear-gradient(top,  #abd164 0%,#b9d972 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#abd164', endColorstr='#b9d972',GradientType=0 ); /* IE6-9 */
+	background-color: #B6D76F;
+}
+.submit:active {
+	top: 3px;
+	border: 1px solid #88A84E;
+	border-top: 1px solid #6E883F;
+	border-bottom: 1px solid #95B855;
+	background: #A7CF5F;
+	box-shadow: inset 0 1px 2px #779441;
+}
+/*Звездочки*/
+ /* внешний контейнер - фон с серыми звездочками */
+.rate_background {
+    position: relative;
+    width: 75px;
+    height: 16px;
+    margin-top: 4px;
+    background:url('/main_static/goods_settings/star_gray.png') repeat-x;
+}
+ 
+/* внутренний контейнер - полоса рейтинга с золотыми звездочками */
+.rate_bar {
+    position: absolute;
+    top: 0px;
+    left: 0px; 
+    height: 16px; 
+    background:url('/main_static/goods_settings/star_gold.png') repeat-x;
+} 
+
+/*end- Звездочки*/
+
+.checkboxGroup {            
+	border: 1px solid #88A84E;
+	box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.4);
+	padding: 5px;
+	}
+
+
+
